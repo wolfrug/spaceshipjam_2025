@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2cf80c159fbc2244fa9923f47d643346
+guid: 5975a3daf18d0bb488297c3eabd593a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2960639430469785879
-    second: SpaceCraftBody_0
+      213: 5344609256303218798
+    second: FireEast_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpaceCraftBody_0
+      name: FireEast_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 34
-        height: 34
+        x: 38
+        y: 23
+        width: 26
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7199a2930ed461920800000000000000
-      internalID: 2960639430469785879
+      spriteID: e60d7393dcddb2a40800000000000000
+      internalID: 5344609256303218798
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SpaceCraftBody_0: 2960639430469785879
+      FireEast_0: 5344609256303218798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

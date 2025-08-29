@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2cf80c159fbc2244fa9923f47d643346
+guid: fcd47a7fa5e7ff04e98773b7eab67996
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2960639430469785879
-    second: SpaceCraftBody_0
+      213: -1223279823767364090
+    second: FireSouth_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpaceCraftBody_0
+      name: FireSouth_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 34
-        height: 34
+        x: 23
+        y: 0
+        width: 17
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7199a2930ed461920800000000000000
-      internalID: 2960639430469785879
+      spriteID: 60e91734b79060fe0800000000000000
+      internalID: -1223279823767364090
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SpaceCraftBody_0: 2960639430469785879
+      FireSouth_0: -1223279823767364090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

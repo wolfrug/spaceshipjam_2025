@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2cf80c159fbc2244fa9923f47d643346
+guid: 8484ee43dbea08445b98dbe687f849e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2960639430469785879
-    second: SpaceCraftBody_0
+      213: -6092389304856081356
+    second: SpaceCraftLegsWest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpaceCraftBody_0
+      name: SpaceCraftLegsWest_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 34
-        height: 34
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7199a2930ed461920800000000000000
-      internalID: 2960639430469785879
+      spriteID: 43c0aa2c43c737ba0800000000000000
+      internalID: -6092389304856081356
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SpaceCraftBody_0: 2960639430469785879
+      SpaceCraftLegsWest_0: -6092389304856081356
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
