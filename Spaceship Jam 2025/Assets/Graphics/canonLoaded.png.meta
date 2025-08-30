@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f72510a4744ff104bb8be9cae0d2631d
+guid: 7b6ed98acb09f7a47aaf4d4c6244333b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9181639578359185712
-    second: asteroid6_0
+      213: -8292042850190496658
+    second: canonLoaded_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: asteroid6_0
+      name: canonLoaded_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 4
-        width: 88
-        height: 88
+        x: 18
+        y: 32
+        width: 22
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0debb3c2373449080800000000000000
-      internalID: -9181639578359185712
+      spriteID: e6ce31cf5febcec80800000000000000
+      internalID: -8292042850190496658
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      asteroid6_0: -9181639578359185712
+      canonLoaded_0: -8292042850190496658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
