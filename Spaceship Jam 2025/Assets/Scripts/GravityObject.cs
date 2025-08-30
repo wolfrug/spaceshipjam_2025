@@ -6,10 +6,9 @@ public class GravityObject : MonoBehaviour
     public Rigidbody2D self;
     public CircleCollider2D gravityWell;
     public float gravityStrength = 5f;
-
     public Vector2 startingVelocity = Vector2.zero;
-
     public bool automatic_gravity_calculation = true;
+    public bool random_starting_velocity = true;
 
 
     public void OnTriggerStay2D(Collider2D collision)
@@ -20,7 +19,7 @@ public class GravityObject : MonoBehaviour
             Vector2 direction = transform.position - rb.transform.position;
             direction = direction.normalized;
             float distance = Vector2.Distance(transform.position, rb.transform.position);
-            rb.AddRelativeForce(direction * gravityStrength / distance);
+            rb.AddRelativeForce(direction * Mathf.Sqrt(gravityStrength / distance), ForceMode2D.Force);
         }
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -41,12 +40,10 @@ public class GravityObject : MonoBehaviour
             gravityStrength = self.mass * gravityModifier;
             gravityWell.radius = gravityStrength * 1.5f;
         }
+        if (random_starting_velocity)
+        {
+            startingVelocity = new Vector2(Random.Range(startingVelocity.x, startingVelocity.y), Random.Range(startingVelocity.x, startingVelocity.y));
+        }
         self.linearVelocity = startingVelocity;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

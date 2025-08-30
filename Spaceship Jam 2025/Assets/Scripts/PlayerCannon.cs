@@ -30,6 +30,17 @@ public class PlayerCannon : MonoBehaviour
         fireAction = InputSystem.actions.FindAction("Attack");
         currentAimAngle = transform.localRotation.eulerAngles;
         LoadPlayerIntoCannon();
+        GlobalEvents.OnPlayerDead += GlobalEvents_OnPlayerDead;
+    }
+
+    void OnDestroy()
+    {
+        GlobalEvents.OnPlayerDead -= GlobalEvents_OnPlayerDead;
+    }
+
+    void GlobalEvents_OnPlayerDead(PlayerEventArgs args)
+    {
+        LoadPlayerIntoCannon();
     }
 
     public void LoadPlayerIntoCannon()
@@ -37,8 +48,11 @@ public class PlayerCannon : MonoBehaviour
         if (PlayerController.Player != null)
         {
             loadedTarget = PlayerController.Player;
+            loadedTarget.HP = loadedTarget.HPMax;
+            loadedTarget.ThrusterFuel = loadedTarget.FuelMax;
             loadedTarget.transform.SetParent(playerPosition);
             loadedTarget.playerRB.bodyType = RigidbodyType2D.Kinematic;
+            loadedTarget.playerRB.linearVelocity = Vector2.zero;
             loadedTarget.transform.localPosition = Vector3.zero;
             loadedTarget.IsControllable = false;
             loadedTarget.playerCamera.Lens.OrthographicSize = lensOrthoSize;
