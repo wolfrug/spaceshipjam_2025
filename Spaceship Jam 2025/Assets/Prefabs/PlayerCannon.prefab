@@ -114,7 +114,7 @@ MonoBehaviour:
   currentAimAngle: {x: 0, y: 0}
   rotateSpeed: 45
   minMaxAimAngle: {x: 1, y: 180}
-  fireForce: 2
+  fireForce: 100
   lensOrthoSize: 5
   loadedTarget: {fileID: 0}
   cannonBarrel: {fileID: 717840230285016079}

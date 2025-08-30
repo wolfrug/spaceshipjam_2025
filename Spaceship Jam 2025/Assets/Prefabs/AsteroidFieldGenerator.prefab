@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6954977918029823114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7864133126153422281}
+  - component: {fileID: 4778475899307525231}
+  - component: {fileID: 2607862850858486704}
+  m_Layer: 0
+  m_Name: AsteroidFieldGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7864133126153422281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954977918029823114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.4636917, y: 13.422, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4778475899307525231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954977918029823114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6207aeb0b13fb884da82a84462356e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomAsteroids:
+  - gameObject: {fileID: 917586399946901320, guid: 289a064bd4c6cd240ad50a23226a8017, type: 3}
+    weight: 1
+  - gameObject: {fileID: 4525574676883935304, guid: 0f6a0453487d01d4cbd24a5bf491ec0a, type: 3}
+    weight: 1
+  - gameObject: {fileID: 3216272528722932995, guid: 143af8950b789ad4ba8bf33c7aae6fe9, type: 3}
+    weight: 1
+  - gameObject: {fileID: 4413033633992206127, guid: 79b8fd25e25261c47a679d6789d328d5, type: 3}
+    weight: 1
+  - gameObject: {fileID: 978794958271098480, guid: 58ae902375783674297f93c70cce93d9, type: 3}
+    weight: 1
+  - gameObject: {fileID: 5885520026221058562, guid: c5c4a2d8635a7144a9ad6abb175f8f3f, type: 3}
+    weight: 1
+  - gameObject: {fileID: 4965218002501329404, guid: 3f60fa629e8e71140a95c78eb1ff020c, type: 3}
+    weight: 1
+  - gameObject: {fileID: 6458031272628142813, guid: 569f15dbea7ff5e4eb4df7d907eb465a, type: 3}
+    weight: 1
+  - gameObject: {fileID: 3055281978269993970, guid: 0ba212d7ed35b844096e9cd6a9b36471, type: 3}
+    weight: 1
+  - gameObject: {fileID: 7975794039030856103, guid: c98d5907824579c49b990571a1dff2c3, type: 3}
+    weight: 1
+  - gameObject: {fileID: 7891632370504878548, guid: 8f9df36d81c8c1e4c8ffc012754b750f, type: 3}
+    weight: 1
+  - gameObject: {fileID: 6830778751044353832, guid: 6b5cdd9990902054d93bb73ea6e12988, type: 3}
+    weight: 1
+  - gameObject: {fileID: 564122418405428024, guid: e90a9b32d556e1b43888deba6eea0a5c, type: 3}
+    weight: 1
+  - gameObject: {fileID: 8600359747447293132, guid: 37f78dcbd8e9f644db20160844190818, type: 3}
+    weight: 1
+  - gameObject: {fileID: 2547908029359903713, guid: fe8738d882d532d45bbc45d727a31f14, type: 3}
+    weight: 1
+  - gameObject: {fileID: 8992857691167554850, guid: 4594e71e57d06f54dab43e26cf574ee5, type: 3}
+    weight: 1
+  - gameObject: {fileID: 2558637960163413107, guid: 92c751417f58d2549904bcf97a877488, type: 3}
+    weight: 1
+  - gameObject: {fileID: 4463699819071880660, guid: 2eedb9679a97fc547bdbcdbfc4e525d0, type: 3}
+    weight: 1
+  deleteArea: {fileID: 2607862850858486704}
+  maxSpawnRadius: 100
+  maxNumberOfAsteroids: 200
+  noSpawnRadiusCenter: 15
+  noSpawnTransformCenter: {fileID: 7864133126153422281}
+  asteroids: []
+--- !u!58 &2607862850858486704
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6954977918029823114}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 200

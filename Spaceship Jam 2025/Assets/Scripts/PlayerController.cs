@@ -28,16 +28,55 @@ public class PlayerController : MonoBehaviour
     } = true;
     public Rigidbody2D playerRB;
     public float thrusterStrength = 5f;
+    private float thrusterfuel;
+    public float ThrusterFuel
+    {
+        get
+        {
+            return thrusterfuel;
+        }
+        set
+        {
+            thrusterfuel = Mathf.Clamp(value, -1f, FuelMax);
+        }
+    }
 
-    public float thrusterFuel = 100f;
+    public float FuelMax
+    {
+        get
+        {
+            return 100f;
+        }
+    }
 
-    public float HP = 100f;
+    public float HP
+    {
+        get
+        {
+            return hp;
+        }
+        set
+        {
+            hp = Mathf.Clamp(value, -1f, HPMax);
+        }
+    }
+    private float hp;
+    public float HPMax
+    {
+        get
+        {
+            return 100f;
+        }
+    }
 
     public float maxVelocity = 20f;
     public Animator animator;
 
     public CinemachineCamera playerCamera;
     public Vector2 minMaxCameraDistance = new Vector2(2f, 10f);
+
+    private float velocity_last_frame;
+    private float min_damage_velocity = 1f;
 
     InputAction moveAction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -54,19 +93,35 @@ public class PlayerController : MonoBehaviour
         {
             case "DangerVelocity":
                 {
-                    Debug.LogWarning("Hit velocity danger layer");
+                    if (collision.relativeVelocity.magnitude > min_damage_velocity)
+                    {
+                        Debug.LogWarning("Hit velocity danger layer doing damage: " + collision.relativeVelocity.magnitude * 5f);
+                        DamagePlayer(collision.relativeVelocity.magnitude * 5f);
+                    }
                     break;
                 }
             case "DangerTouch":
                 {
                     Debug.LogWarning("Hit touch danger layer");
+                    DamagePlayer(5f);
                     break;
                 }
             case "InstantKill":
                 {
                     Debug.LogWarning("Hit instant kill danger layer");
+                    DamagePlayer(500f);
                     break;
                 }
+        }
+    }
+
+    public void DamagePlayer(float damage)
+    {
+        HP -= damage;
+        GlobalEvents.SendOnPlayerTakeDamage(new PlayerEventArgs { player = this });
+        if (HP <= 0f)
+        {
+            GlobalEvents.SendOnPlayerDead(new PlayerEventArgs { player = this, playerDead = true });
         }
     }
 
@@ -79,9 +134,9 @@ public class PlayerController : MonoBehaviour
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         // your movement code here
         //Debug.Log("Move value is: " + moveValue);
-        if (thrusterFuel > 0f && IsControllable)
+        if (ThrusterFuel > 0f && IsControllable)
         {
-            playerRB.AddRelativeForce(moveValue * thrusterStrength);
+            playerRB.AddForce(moveValue * thrusterStrength);
             if (animator != null)
             {
                 if (moveValue.x > 0)
@@ -111,7 +166,8 @@ public class PlayerController : MonoBehaviour
                     animator.SetBool("thrust_down", false);
                 }
             }
-            thrusterFuel -= Mathf.Abs(moveValue.magnitude) * Time.deltaTime;
+            ThrusterFuel -= Mathf.Abs(moveValue.magnitude) * Time.deltaTime;
+            GlobalEvents.SendOnPlayerUseThruster(new PlayerEventArgs { player = this });
         }
         else
         {
@@ -131,7 +187,11 @@ public class PlayerController : MonoBehaviour
     {
         if (playerCamera != null && IsControllable)
         {
-            playerCamera.Lens.OrthographicSize = Mathf.Lerp(playerCamera.Lens.OrthographicSize, Mathf.Clamp(playerRB.linearVelocity.magnitude, minMaxCameraDistance.x, minMaxCameraDistance.y), Time.deltaTime);
+            playerCamera.Lens.OrthographicSize = Mathf.Lerp(playerCamera.Lens.OrthographicSize, Mathf.Clamp(playerRB.linearVelocity.magnitude, minMaxCameraDistance.x, minMaxCameraDistance.y), Time.deltaTime * 1000f);
         }
+    }
+    void LateUpdate()
+    {
+        velocity_last_frame = playerRB.linearVelocity.magnitude;
     }
 }
