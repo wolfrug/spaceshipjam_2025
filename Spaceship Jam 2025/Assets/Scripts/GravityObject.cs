@@ -20,12 +20,18 @@ public class GravityObject : MonoBehaviour
             Vector2 direction = transform.position - rb.transform.position;
             direction = direction.normalized;
             float distance = Vector2.Distance(transform.position, rb.transform.position);
-            rb.AddRelativeForce(direction * gravityStrength/distance);
+            rb.AddRelativeForce(direction * gravityStrength / distance);
         }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Trigger entered gravity object: " + collision.gameObject.name, gameObject);
+        GlobalEvents.SendOnGravityObjectOrbitEntered(new TriggerEnteredEventArgs { triggerInstigator = collision, triggerOwner = gameObject });
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        
+        Debug.Log("Trigger exited gravity object: " + collision.gameObject.name, gameObject);
+        GlobalEvents.SendOnGravityObjectOrbitExited(new TriggerEnteredEventArgs { triggerInstigator = collision, triggerOwner = gameObject });
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,7 +39,7 @@ public class GravityObject : MonoBehaviour
         if (automatic_gravity_calculation && self != null)
         {
             gravityStrength = self.mass * gravityModifier;
-            gravityWell.radius = gravityStrength*1.5f;
+            gravityWell.radius = gravityStrength * 1.5f;
         }
         self.linearVelocity = startingVelocity;
     }
@@ -41,6 +47,6 @@ public class GravityObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

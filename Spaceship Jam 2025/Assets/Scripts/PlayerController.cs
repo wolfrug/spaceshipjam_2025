@@ -4,8 +4,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static GameObject Player;
     public Rigidbody2D playerRB;
     public float thrusterStrength = 5f;
+
+    public float thrusterFuel = 100f;
 
     public float maxVelocity = 20f;
     public Animator animator;
@@ -17,6 +20,7 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Player = gameObject;
         moveAction = InputSystem.actions.FindAction("Move");
     }
 
@@ -28,37 +32,49 @@ public class PlayerController : MonoBehaviour
 
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         // your movement code here
-        Debug.Log("Move value is: " + moveValue);
-        playerRB.AddRelativeForce(moveValue * thrusterStrength);
-        if (animator != null)
+        //Debug.Log("Move value is: " + moveValue);
+        if (thrusterFuel > 0f)
         {
-            if (moveValue.x > 0)
+            playerRB.AddRelativeForce(moveValue * thrusterStrength);
+            if (animator != null)
             {
-                animator.SetBool("thrust_left", true);
+                if (moveValue.x > 0)
+                {
+                    animator.SetBool("thrust_left", true);
+                }
+                if (moveValue.x < 0)
+                {
+                    animator.SetBool("thrust_right", true);
+                }
+                if (moveValue.x == 0f)
+                {
+                    animator.SetBool("thrust_left", false);
+                    animator.SetBool("thrust_right", false);
+                }
+                if (moveValue.y < 0)
+                {
+                    animator.SetBool("thrust_up", true);
+                }
+                if (moveValue.y > 0)
+                {
+                    animator.SetBool("thrust_down", true);
+                }
+                if (moveValue.y == 0f)
+                {
+                    animator.SetBool("thrust_up", false);
+                    animator.SetBool("thrust_down", false);
+                }
             }
-            if (moveValue.x < 0)
-            {
-                animator.SetBool("thrust_right", true);
-            }
-            if (moveValue.x == 0f)
-            {
-                animator.SetBool("thrust_left", false);
-                animator.SetBool("thrust_right", false);
-            }
-            if (moveValue.y < 0)
-            {
-                animator.SetBool("thrust_up", true);
-            }
-            if (moveValue.y > 0)
-            {
-                animator.SetBool("thrust_down", true);
-            }
-            if (moveValue.y == 0f)
-            {
-                animator.SetBool("thrust_up", false);
-                animator.SetBool("thrust_down", false);
-            }
+            thrusterFuel -= Mathf.Abs(moveValue.magnitude) * Time.deltaTime;
         }
+        else
+        {
+            animator.SetBool("thrust_up", false);
+            animator.SetBool("thrust_down", false);
+            animator.SetBool("thrust_left", false);
+            animator.SetBool("thrust_right", false);
+        }
+        // Max player velocity. Not very realistic, but...helps.
         if (playerRB.linearVelocity.magnitude > maxVelocity)
         {
             playerRB.AddRelativeForce(-playerRB.linearVelocity);
