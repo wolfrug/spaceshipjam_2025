@@ -4,7 +4,28 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public static GameObject Player;
+    public static PlayerController Player
+    {
+        get
+        {
+            if (m_player == null)
+            {
+                m_player = FindFirstObjectByType<PlayerController>();
+            }
+            return m_player;
+        }
+        set
+        {
+            m_player = value;
+        }
+    }
+    private static PlayerController m_player;
+
+    public bool IsControllable
+    {
+        get;
+        set;
+    } = true;
     public Rigidbody2D playerRB;
     public float thrusterStrength = 5f;
 
@@ -18,9 +39,9 @@ public class PlayerController : MonoBehaviour
 
     InputAction moveAction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        Player = gameObject;
+        Player = this;
         moveAction = InputSystem.actions.FindAction("Move");
     }
 
@@ -33,7 +54,7 @@ public class PlayerController : MonoBehaviour
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         // your movement code here
         //Debug.Log("Move value is: " + moveValue);
-        if (thrusterFuel > 0f)
+        if (thrusterFuel > 0f && IsControllable)
         {
             playerRB.AddRelativeForce(moveValue * thrusterStrength);
             if (animator != null)
@@ -83,7 +104,7 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (playerCamera != null)
+        if (playerCamera != null && IsControllable)
         {
             playerCamera.Lens.OrthographicSize = Mathf.Lerp(playerCamera.Lens.OrthographicSize, Mathf.Clamp(playerRB.linearVelocity.magnitude, minMaxCameraDistance.x, minMaxCameraDistance.y), Time.deltaTime);
         }
