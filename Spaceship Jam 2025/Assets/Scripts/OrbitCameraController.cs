@@ -21,7 +21,7 @@ public class OrbitCameraController : MonoBehaviour
 
     void GlobalEventOnOrbitEntered(TriggerEnteredEventArgs args)
     {
-        if (args.triggerInstigator.gameObject == PlayerController.Player)
+        if (args.triggerInstigator.gameObject == PlayerController.Player.gameObject)
         {
             if (targetGroup.FindMember(args.triggerOwner.transform) < 0)
             {
@@ -31,7 +31,7 @@ public class OrbitCameraController : MonoBehaviour
     }
     void GlobalEventOnOrbitExited(TriggerEnteredEventArgs args)
     {
-        if (args.triggerInstigator.gameObject == PlayerController.Player)
+        if (args.triggerInstigator.gameObject == PlayerController.Player.gameObject)
         {
             targetGroup.RemoveMember(args.triggerOwner.transform);
         }
