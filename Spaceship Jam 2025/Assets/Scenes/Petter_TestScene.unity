@@ -194,7 +194,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 765360694}
@@ -234,7 +234,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.0006201744, y: 0}
-  m_Radius: 0.09635138
+  m_Radius: 0.24
 --- !u!212 &313697548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -279,8 +279,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+  m_Sprite: {fileID: -5562785595910269535, guid: 7ac347a5803f46840b5fe8d96cd48c0b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 627942718}
   - component: {fileID: 627942717}
   - component: {fileID: 627942716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GravityWellBase (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -422,7 +422,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!58 &627942717
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -520,7 +520,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 627942719}
@@ -560,7 +560,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.0006201744, y: 0}
-  m_Radius: 0.09635138
+  m_Radius: 0.16
 --- !u!212 &690654185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -605,8 +605,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+  m_Sprite: {fileID: 7460158044898821437, guid: 382a6caf1248d1141995faa6fa5b4466, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 765360693}
   - component: {fileID: 765360692}
   - component: {fileID: 765360691}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GravityWellBase (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 35
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -832,7 +832,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!58 &765360692
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1132,7 +1132,7 @@ GameObject:
   - component: {fileID: 1033205415}
   - component: {fileID: 1033205414}
   - component: {fileID: 1033205413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GravityWellBase (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1165,7 +1165,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!58 &1033205414
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1396,8 +1396,8 @@ Transform:
   m_GameObject: {fileID: 1084075851}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.09, y: 7.24, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1033205416}
@@ -1437,7 +1437,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.0006201744, y: 0}
-  m_Radius: 0.09635138
+  m_Radius: 0.5
 --- !u!212 &1084075854
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1482,8 +1482,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+  m_Sprite: {fileID: 6948617952406470494, guid: a30b027e7bbd1884c9e3b789fe75b94a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2086,7 +2086,7 @@ GameObject:
   - component: {fileID: 1781590988}
   - component: {fileID: 1781590987}
   - component: {fileID: 1781590986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GravityWellBase (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2105,7 +2105,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 40
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -2119,7 +2119,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0
 --- !u!58 &1781590987
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2268,7 +2268,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.0006201744, y: 0}
-  m_Radius: 0.09635138
+  m_Radius: 0.15
 --- !u!212 &1972982100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2313,8 +2313,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+  m_Sprite: {fileID: -1150634100729553598, guid: 66704bb09dbfb1342af751aa49ddd8d0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2394,7 +2394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244348336209332750, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.05
+      value: 4.158
       objectReference: {fileID: 0}
     - target: {fileID: 4244348336209332750, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2402,7 +2402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244348336209332750, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4244348336209332750, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2414,7 +2414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244348336209332750, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4244348336209332750, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2426,7 +2426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244348336209332750, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037885713739721932, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
+      propertyPath: fireForce
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7037885713739721932, guid: 46c16511ecaad58469f79365c6618d06, type: 3}
       propertyPath: loadedTarget
@@ -2489,6 +2493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GravityWellBase
       objectReference: {fileID: 0}
+    - target: {fileID: 3500367384335024053, guid: fbbf9f24cbdcc944c8814ff9c1546804, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2506,13 +2514,17 @@ PrefabInstance:
       propertyPath: thrusterFuel
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3479394836527791700, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: thrusterStrength
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5450893262999073581, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.586
+      value: -25.76369
       objectReference: {fileID: 0}
     - target: {fileID: 5450893262999073581, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.8200006
+      value: 4.578
       objectReference: {fileID: 0}
     - target: {fileID: 5450893262999073581, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2524,15 +2536,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5450893262999073581, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5450893262999073581, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5450893262999073581, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5450893262999073581, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2546,9 +2558,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5648383811053174239, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648383811053174239, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648383811053174239, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648383811053174239, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6826356573305583034, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
       propertyPath: m_Name
       value: Player_Controllable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479255869265406449, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479255869265406449, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479255869265406449, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479255869265406449, guid: 38aef38919957e34997b3b81e3ebaaa3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

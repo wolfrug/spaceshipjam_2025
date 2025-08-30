@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     public float thrusterFuel = 100f;
 
+    public float HP = 100f;
+
     public float maxVelocity = 20f;
     public Animator animator;
 
@@ -43,6 +45,29 @@ public class PlayerController : MonoBehaviour
     {
         Player = this;
         moveAction = InputSystem.actions.FindAction("Move");
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        string layer = LayerMask.LayerToName(collision.gameObject.layer);
+        switch (layer)
+        {
+            case "DangerVelocity":
+                {
+                    Debug.LogWarning("Hit velocity danger layer");
+                    break;
+                }
+            case "DangerTouch":
+                {
+                    Debug.LogWarning("Hit touch danger layer");
+                    break;
+                }
+            case "InstantKill":
+                {
+                    Debug.LogWarning("Hit instant kill danger layer");
+                    break;
+                }
+        }
     }
 
     // Update is called once per frame

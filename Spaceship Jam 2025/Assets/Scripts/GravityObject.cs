@@ -25,12 +25,12 @@ public class GravityObject : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger entered gravity object: " + collision.gameObject.name, gameObject);
+       // Debug.Log("Trigger entered gravity object: " + collision.gameObject.name, gameObject);
         GlobalEvents.SendOnGravityObjectOrbitEntered(new TriggerEnteredEventArgs { triggerInstigator = collision, triggerOwner = gameObject });
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Trigger exited gravity object: " + collision.gameObject.name, gameObject);
+      //  Debug.Log("Trigger exited gravity object: " + collision.gameObject.name, gameObject);
         GlobalEvents.SendOnGravityObjectOrbitExited(new TriggerEnteredEventArgs { triggerInstigator = collision, triggerOwner = gameObject });
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
