@@ -19,6 +19,9 @@ public class PlayerCannon : MonoBehaviour
 
     public PlayerController loadedTarget;
     public Transform cannonBarrel;
+    public Transform playerPosition;
+
+    public Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +37,7 @@ public class PlayerCannon : MonoBehaviour
         if (PlayerController.Player != null)
         {
             loadedTarget = PlayerController.Player;
-            loadedTarget.transform.SetParent(cannonBarrel);
+            loadedTarget.transform.SetParent(playerPosition);
             loadedTarget.playerRB.bodyType = RigidbodyType2D.Kinematic;
             loadedTarget.transform.localPosition = Vector3.zero;
             loadedTarget.IsControllable = false;
@@ -45,10 +48,12 @@ public class PlayerCannon : MonoBehaviour
     {
         if (loadedTarget != null)
         {
+            animator.SetTrigger("launch");
             loadedTarget.playerRB.bodyType = RigidbodyType2D.Dynamic;
-            loadedTarget.playerRB.AddForce(transform.right * fireForce, ForceMode2D.Impulse);
+            loadedTarget.playerRB.AddForce(cannonBarrel.transform.right * fireForce, ForceMode2D.Impulse);
             loadedTarget.IsControllable = true;
             loadedTarget.transform.parent = null;
+            loadedTarget.transform.eulerAngles = Vector3.zero;
             loadedTarget = null;
         }
     }
@@ -62,9 +67,9 @@ public class PlayerCannon : MonoBehaviour
         {
             Vector2 moveValue = moveAction.ReadValue<Vector2>();
 
-            transform.Rotate(0f, 0f, -moveValue.x * Time.deltaTime * rotateSpeed);
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, Mathf.Clamp(transform.localEulerAngles.z, minMaxAimAngle.x, minMaxAimAngle.y));
-            currentAimAngle = transform.localEulerAngles;
+            cannonBarrel.transform.Rotate(0f, 0f, -moveValue.x * Time.deltaTime * rotateSpeed);
+            cannonBarrel.transform.localEulerAngles = new Vector3(cannonBarrel.transform.localEulerAngles.x, cannonBarrel.transform.localEulerAngles.y, Mathf.Clamp(cannonBarrel.transform.localEulerAngles.z, minMaxAimAngle.x, minMaxAimAngle.y));
+            currentAimAngle = cannonBarrel.transform.localEulerAngles;
 
             if (fireAction.IsPressed())
             {
