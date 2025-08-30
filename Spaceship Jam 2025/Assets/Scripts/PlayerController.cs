@@ -55,19 +55,27 @@ public class PlayerController : MonoBehaviour
             case "DangerVelocity":
                 {
                     Debug.LogWarning("Hit velocity danger layer");
+                    DamagePlayer(playerRB.linearVelocity.magnitude * 5f);
                     break;
                 }
             case "DangerTouch":
                 {
                     Debug.LogWarning("Hit touch danger layer");
+                    DamagePlayer(5f);
                     break;
                 }
             case "InstantKill":
                 {
                     Debug.LogWarning("Hit instant kill danger layer");
+                    DamagePlayer(500f);
                     break;
                 }
         }
+    }
+
+    public void DamagePlayer(float damage)
+    {
+        HP -= damage;
     }
 
     // Update is called once per frame
