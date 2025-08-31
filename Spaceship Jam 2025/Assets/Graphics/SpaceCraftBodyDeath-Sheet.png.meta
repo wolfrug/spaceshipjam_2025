@@ -1,0 +1,605 @@
+fileFormatVersion: 2
+guid: 46dccef9ef2a69540bbe8817b2e74b8b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2114298901373087943
+    second: SpaceCraftBodyDeath-Sheet_0
+  - first:
+      213: -3435570094706580505
+    second: SpaceCraftBodyDeath-Sheet_1
+  - first:
+      213: -7685100360052586975
+    second: SpaceCraftBodyDeath-Sheet_2
+  - first:
+      213: -5324312759111974375
+    second: SpaceCraftBodyDeath-Sheet_3
+  - first:
+      213: 7987456251637213490
+    second: SpaceCraftBodyDeath-Sheet_4
+  - first:
+      213: -7580347426671078472
+    second: SpaceCraftBodyDeath-Sheet_5
+  - first:
+      213: 6244235823218365212
+    second: SpaceCraftBodyDeath-Sheet_6
+  - first:
+      213: -976975755908090136
+    second: SpaceCraftBodyDeath-Sheet_7
+  - first:
+      213: -1124544174173826289
+    second: SpaceCraftBodyDeath-Sheet_8
+  - first:
+      213: 9168096376958996514
+    second: SpaceCraftBodyDeath-Sheet_9
+  - first:
+      213: 9131856590592801852
+    second: SpaceCraftBodyDeath-Sheet_10
+  - first:
+      213: 7778377786827429276
+    second: SpaceCraftBodyDeath-Sheet_11
+  - first:
+      213: 5947260936997420416
+    second: SpaceCraftBodyDeath-Sheet_12
+  - first:
+      213: 2224081601383819818
+    second: SpaceCraftBodyDeath-Sheet_13
+  - first:
+      213: -3699006841002026014
+    second: SpaceCraftBodyDeath-Sheet_14
+  - first:
+      213: 3352565078454254880
+    second: SpaceCraftBodyDeath-Sheet_15
+  - first:
+      213: -1063360053720581758
+    second: SpaceCraftBodyDeath-Sheet_16
+  - first:
+      213: -6855957357538589983
+    second: SpaceCraftBodyDeath-Sheet_17
+  - first:
+      213: 5658072043488768983
+    second: SpaceCraftBodyDeath-Sheet_18
+  - first:
+      213: -2845246895877675128
+    second: SpaceCraftBodyDeath-Sheet_19
+  - first:
+      213: -5054743284006821692
+    second: SpaceCraftBodyDeath-Sheet_20
+  - first:
+      213: 6179362216502283943
+    second: SpaceCraftBodyDeath-Sheet_21
+  - first:
+      213: -8466102130928727831
+    second: SpaceCraftBodyDeath-Sheet_22
+  - first:
+      213: -101312684867256085
+    second: SpaceCraftBodyDeath-Sheet_23
+  - first:
+      213: -1699462062917425772
+    second: SpaceCraftBodyDeath-Sheet_24
+  - first:
+      213: 8062108978187451613
+    second: SpaceCraftBodyDeath-Sheet_25
+  - first:
+      213: -590396729287881191
+    second: SpaceCraftBodyDeath-Sheet_26
+  - first:
+      213: 2851250812975876541
+    second: SpaceCraftBodyDeath-Sheet_27
+  - first:
+      213: -995672596354584008
+    second: SpaceCraftBodyDeath-Sheet_28
+  - first:
+      213: 7640034478621154745
+    second: SpaceCraftBodyDeath-Sheet_29
+  - first:
+      213: -4828965337202560128
+    second: SpaceCraftBodyDeath-Sheet_30
+  - first:
+      213: 5858420324959224592
+    second: SpaceCraftBodyDeath-Sheet_31
+  - first:
+      213: 21152850863338137
+    second: SpaceCraftBodyDeath-Sheet_32
+  - first:
+      213: -917048165941919923
+    second: SpaceCraftBodyDeath-Sheet_33
+  - first:
+      213: 7095577481801412080
+    second: SpaceCraftBodyDeath-Sheet_34
+  - first:
+      213: -7425192418038292667
+    second: SpaceCraftBodyDeath-Sheet_35
+  - first:
+      213: 3162472598978377382
+    second: SpaceCraftBodyDeath-Sheet_36
+  - first:
+      213: -8980284797718511779
+    second: SpaceCraftBodyDeath-Sheet_37
+  - first:
+      213: 2968634931337687469
+    second: SpaceCraftBodyDeath-Sheet_38
+  - first:
+      213: -1108657713940956062
+    second: SpaceCraftBodyDeath-Sheet_39
+  - first:
+      213: 4383865561165539401
+    second: SpaceCraftBodyDeath-Sheet_40
+  - first:
+      213: -2429869299817867785
+    second: SpaceCraftBodyDeath-Sheet_41
+  - first:
+      213: 2760084010029562632
+    second: SpaceCraftBodyDeath-Sheet_42
+  - first:
+      213: -3269809080959665546
+    second: SpaceCraftBodyDeath-Sheet_43
+  - first:
+      213: -2889801147408285801
+    second: SpaceCraftBodyDeath-Sheet_44
+  - first:
+      213: -4528591494897935945
+    second: SpaceCraftBodyDeath-Sheet_45
+  - first:
+      213: -8894980938418841379
+    second: SpaceCraftBodyDeath-Sheet_46
+  - first:
+      213: -2888644142040812096
+    second: SpaceCraftBodyDeath-Sheet_47
+  - first:
+      213: 6157367918230215400
+    second: SpaceCraftBodyDeath-Sheet_48
+  - first:
+      213: 3817510213234261887
+    second: SpaceCraftBodyDeath-Sheet_49
+  - first:
+      213: 3043218397315135069
+    second: SpaceCraftBodyDeath-Sheet_50
+  - first:
+      213: -6285082365579098697
+    second: SpaceCraftBodyDeath-Sheet_51
+  - first:
+      213: 8839327970209307212
+    second: SpaceCraftBodyDeath-Sheet_52
+  - first:
+      213: 737738231507052112
+    second: SpaceCraftBodyDeath-Sheet_53
+  - first:
+      213: -1435940750193432199
+    second: SpaceCraftBodyDeath-Sheet_54
+  - first:
+      213: -4445076599260001243
+    second: SpaceCraftBodyDeath-Sheet_55
+  - first:
+      213: -2409186333891564436
+    second: SpaceCraftBodyDeath-Sheet_56
+  - first:
+      213: 7740041000589327050
+    second: SpaceCraftBodyDeath-Sheet_57
+  - first:
+      213: -8669506896750268375
+    second: SpaceCraftBodyDeath-Sheet_58
+  - first:
+      213: -8046717211246905384
+    second: SpaceCraftBodyDeath-Sheet_59
+  - first:
+      213: 3508464390611141469
+    second: SpaceCraftBodyDeath-Sheet_60
+  - first:
+      213: -6282781757194452578
+    second: SpaceCraftBodyDeath-Sheet_61
+  - first:
+      213: -5964251696591943075
+    second: SpaceCraftBodyDeath-Sheet_62
+  - first:
+      213: -8406215869250031339
+    second: SpaceCraftBodyDeath-Sheet_63
+  - first:
+      213: 4343909719283083921
+    second: SpaceCraftBodyDeath-Sheet_64
+  - first:
+      213: 7696963150181267344
+    second: SpaceCraftBodyDeath-Sheet_65
+  - first:
+      213: -8076670472721018049
+    second: SpaceCraftBodyDeath-Sheet_66
+  - first:
+      213: 4881593562454669158
+    second: SpaceCraftBodyDeath-Sheet_67
+  - first:
+      213: -2825792935395031041
+    second: SpaceCraftBodyDeath-Sheet_68
+  - first:
+      213: -6433451223568728727
+    second: SpaceCraftBodyDeath-Sheet_69
+  - first:
+      213: -8347621108823238442
+    second: SpaceCraftBodyDeath-Sheet_70
+  - first:
+      213: -2489918183048374748
+    second: SpaceCraftBodyDeath-Sheet_71
+  - first:
+      213: 945406529072193111
+    second: SpaceCraftBodyDeath-Sheet_72
+  - first:
+      213: -8115699558647375551
+    second: SpaceCraftBodyDeath-Sheet_73
+  - first:
+      213: 9186256890913740534
+    second: SpaceCraftBodyDeath-Sheet_74
+  - first:
+      213: 4887065888460526668
+    second: SpaceCraftBodyDeath-Sheet_75
+  - first:
+      213: 7629905708181089881
+    second: SpaceCraftBodyDeath-Sheet_76
+  - first:
+      213: -9164124546245117075
+    second: SpaceCraftBodyDeath-Sheet_77
+  - first:
+      213: 3002183189897388199
+    second: SpaceCraftBodyDeath-Sheet_78
+  - first:
+      213: -2448380446629782350
+    second: SpaceCraftBodyDeath-Sheet_79
+  - first:
+      213: 5372442021241742562
+    second: SpaceCraftBodyDeath-Sheet_80
+  - first:
+      213: -8433012806811924408
+    second: SpaceCraftBodyDeath-Sheet_81
+  - first:
+      213: -6807796835689701574
+    second: SpaceCraftBodyDeath-Sheet_82
+  - first:
+      213: 8393545365616991882
+    second: SpaceCraftBodyDeath-Sheet_83
+  - first:
+      213: 731495911594011520
+    second: SpaceCraftBodyDeath-Sheet_84
+  - first:
+      213: -552579166816850803
+    second: SpaceCraftBodyDeath-Sheet_85
+  - first:
+      213: -629094141991703345
+    second: SpaceCraftBodyDeath-Sheet_86
+  - first:
+      213: 7587264295493453244
+    second: SpaceCraftBodyDeath-Sheet_87
+  - first:
+      213: 1695627993280104423
+    second: SpaceCraftBodyDeath-Sheet_88
+  - first:
+      213: 5596003419198772887
+    second: SpaceCraftBodyDeath-Sheet_89
+  - first:
+      213: -2092608191919598429
+    second: SpaceCraftBodyDeath-Sheet_90
+  - first:
+      213: 1069177166068159242
+    second: SpaceCraftBodyDeath-Sheet_91
+  - first:
+      213: 4742177403098220702
+    second: SpaceCraftBodyDeath-Sheet_92
+  - first:
+      213: -8348967673952865606
+    second: SpaceCraftBodyDeath-Sheet_93
+  - first:
+      213: 44772663050970988
+    second: SpaceCraftBodyDeath-Sheet_94
+  - first:
+      213: 3601970523400066356
+    second: SpaceCraftBodyDeath-Sheet_95
+  - first:
+      213: -1654696701005394916
+    second: SpaceCraftBodyDeath-Sheet_96
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpaceCraftBodyDeath-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0775516af775d10800000000000000
+      internalID: 2114298901373087943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceCraftBodyDeath-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e32f0883376250d0800000000000000
+      internalID: -3435570094706580505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceCraftBodyDeath-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126c6df90f9095590800000000000000
+      internalID: -7685100360052586975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceCraftBodyDeath-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9120d0841cd3c16b0800000000000000
+      internalID: -5324312759111974375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceCraftBodyDeath-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2392fc9342529de60800000000000000
+      internalID: 7987456251637213490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceCraftBodyDeath-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b359378d223dc690800000000000000
+      internalID: -7580347426671078472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceCraftBodyDeath-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1313b8d56bf7a650800000000000000
+      internalID: 6244235823218365212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceCraftBodyDeath-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6fdeae9b51172f0800000000000000
+      internalID: -976975755908090136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 60d9893795b59b34c87b9cfd627b8e64
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpaceCraftBodyDeath-Sheet_0: 2114298901373087943
+      SpaceCraftBodyDeath-Sheet_1: -3435570094706580505
+      SpaceCraftBodyDeath-Sheet_2: -7685100360052586975
+      SpaceCraftBodyDeath-Sheet_3: -5324312759111974375
+      SpaceCraftBodyDeath-Sheet_4: 7987456251637213490
+      SpaceCraftBodyDeath-Sheet_5: -7580347426671078472
+      SpaceCraftBodyDeath-Sheet_6: 6244235823218365212
+      SpaceCraftBodyDeath-Sheet_7: -976975755908090136
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
