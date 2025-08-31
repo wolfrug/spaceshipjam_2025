@@ -23,6 +23,12 @@ public class HUDEventArgs
     public bool success;
 }
 
+[System.Serializable]
+public class GameEventArgs
+{
+    public bool wonGame;
+}
+
 public static class GlobalEvents
 {
 
@@ -30,6 +36,9 @@ public static class GlobalEvents
     public delegate void TriggeredEnteredEvent(TriggerEnteredEventArgs eventArgs);
     public static TriggeredEnteredEvent OnGravityObjectOrbitEntered;
     public static TriggeredEnteredEvent OnGravityObjectOrbitExited;
+
+    public static TriggeredEnteredEvent OnCloseToUniverseEdgeEntered;
+    public static TriggeredEnteredEvent OnCloseToUniverseEdgeExited;
 
     public static void SendOnGravityObjectOrbitEntered(TriggerEnteredEventArgs args)
     {
@@ -40,10 +49,21 @@ public static class GlobalEvents
         OnGravityObjectOrbitExited?.Invoke(args);
     }
 
+    public static void SendOnCloseToUniverseEdgeEntered(TriggerEnteredEventArgs args)
+    {
+        OnCloseToUniverseEdgeEntered?.Invoke(args);
+    }
+
+    public static void SendOnCloseToUniverseEdgeExited(TriggerEnteredEventArgs args)
+    {
+        OnCloseToUniverseEdgeExited?.Invoke(args);
+    }
+
     // player
     public delegate void PlayerEvent(PlayerEventArgs eventArgs);
 
     public static PlayerEvent OnPlayerDead;
+    public static PlayerEvent OnPlayerRespawned;
     public static PlayerEvent OnPlayerUseThruster;
     public static PlayerEvent OnPlayerTakeDamage;
 
@@ -51,6 +71,10 @@ public static class GlobalEvents
     public static void SendOnPlayerDead(PlayerEventArgs args)
     {
         OnPlayerDead?.Invoke(args);
+    }
+    public static void SendOnPlayerRespawned(PlayerEventArgs args)
+    {
+        OnPlayerRespawned?.Invoke(args);
     }
     public static void SendOnPlayerUseThruster(PlayerEventArgs args)
     {
@@ -73,6 +97,14 @@ public static class GlobalEvents
     public static void SendOnPointOfInterestFinished(HUDEventArgs args)
     {
         OnPointOfInterestFinished?.Invoke(args);
+    }
+
+    // Game events
+    public delegate void GameEvent(GameEventArgs eventArgs);
+    public static GameEvent OnObjectivesComplete;
+    public static void SendOnObjectivesComplete(GameEventArgs args)
+    {
+        OnObjectivesComplete?.Invoke(args);
     }
 
 }

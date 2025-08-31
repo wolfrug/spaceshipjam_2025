@@ -14,6 +14,12 @@ public class PlayerHUD : MonoBehaviour
     public int currentVictoryPoints = 0;
     public int maxVictoryPoints = 10;
 
+    public TextMeshProUGUI objectiveText;
+
+    public GameObject outOfRangeObject;
+
+    public GameObject probeLostObject;
+
     public List<PointOfInterest> activePOIs = new List<PointOfInterest> { };
 
     public void AddNewObjectiveIcon(PointOfInterestHUD newIcon)
@@ -39,10 +45,14 @@ public class PlayerHUD : MonoBehaviour
         GlobalEvents.OnPlayerTakeDamage += GlobalEvents_OnPlayerTakeDamage;
         GlobalEvents.OnPlayerUseThruster += GlobalEvents_OnPlayerUseThruster;
         GlobalEvents.OnPlayerDead += GlobalEvents_OnPlayerDead;
+        GlobalEvents.OnPlayerRespawned += GlobalEvents_OnPlayerRespawned;
         GlobalEvents.OnPointOfInterestSpawned += GlobalEvents_OnNewPOISpawned;
         GlobalEvents.OnPointOfInterestFinished += GlobalEvents_OnPOIFinished;
+        GlobalEvents.OnCloseToUniverseEdgeEntered += GlobalEvents_OnEdgeEntered;
+        GlobalEvents.OnCloseToUniverseEdgeExited += GlobalEvents_OnEdgeExited;
 
         victoryCounterText.SetText(string.Format("{0}/{1}", currentVictoryPoints, maxVictoryPoints));
+        objectiveText.SetText("Gather " + maxVictoryPoints + " data cores from nearby asteroids.");
     }
 
     void OnDestroy()
@@ -50,14 +60,20 @@ public class PlayerHUD : MonoBehaviour
         GlobalEvents.OnPlayerTakeDamage -= GlobalEvents_OnPlayerTakeDamage;
         GlobalEvents.OnPlayerUseThruster -= GlobalEvents_OnPlayerUseThruster;
         GlobalEvents.OnPlayerDead -= GlobalEvents_OnPlayerDead;
+        GlobalEvents.OnPlayerRespawned -= GlobalEvents_OnPlayerRespawned;
         GlobalEvents.OnPointOfInterestSpawned -= GlobalEvents_OnNewPOISpawned;
         GlobalEvents.OnPointOfInterestFinished -= GlobalEvents_OnPOIFinished;
+        GlobalEvents.OnCloseToUniverseEdgeEntered -= GlobalEvents_OnEdgeEntered;
+        GlobalEvents.OnCloseToUniverseEdgeExited -= GlobalEvents_OnEdgeExited;
     }
 
     void ResetHUD()
     {
         healthImage.fillAmount = 1f;
         fuelImage.fillAmount = 1f;
+        currentVictoryPoints = 0;
+        victoryCounterText.SetText(string.Format("{0}/{1}", currentVictoryPoints, maxVictoryPoints));
+        objectiveText.SetText("Gather " + maxVictoryPoints + " data cores from nearby asteroids.");
     }
 
     void CountUpSuccess()
@@ -68,9 +84,20 @@ public class PlayerHUD : MonoBehaviour
         Debug.Log("Counting up success! Current victory points: " + currentVictoryPoints);
         if (currentVictoryPoints >= maxVictoryPoints)
         {
-            SceneManager.LoadScene("EndScene");
+            GlobalEvents.SendOnObjectivesComplete(new GameEventArgs { wonGame = false });
+            objectiveText.SetText("Return to base with the data!");
         }
     }
+
+    void GlobalEvents_OnEdgeEntered(TriggerEnteredEventArgs args)
+    {
+        outOfRangeObject.SetActive(true);
+    }
+    void GlobalEvents_OnEdgeExited(TriggerEnteredEventArgs args)
+    {
+        outOfRangeObject.SetActive(false);
+    }
+
 
     void GlobalEvents_OnNewPOISpawned(HUDEventArgs args)
     {
@@ -89,7 +116,12 @@ public class PlayerHUD : MonoBehaviour
 
     void GlobalEvents_OnPlayerDead(PlayerEventArgs args)
     {
+        probeLostObject.SetActive(true);
+    }
+    void GlobalEvents_OnPlayerRespawned(PlayerEventArgs args)
+    {
         ResetHUD();
+        probeLostObject.SetActive(false);
     }
 
     void GlobalEvents_OnPlayerTakeDamage(PlayerEventArgs args)
