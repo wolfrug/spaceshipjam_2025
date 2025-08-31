@@ -23,6 +23,12 @@ public class HUDEventArgs
     public bool success;
 }
 
+[System.Serializable]
+public class GameEventArgs
+{
+    public bool wonGame;
+}
+
 public static class GlobalEvents
 {
 
@@ -73,6 +79,14 @@ public static class GlobalEvents
     public static void SendOnPointOfInterestFinished(HUDEventArgs args)
     {
         OnPointOfInterestFinished?.Invoke(args);
+    }
+
+    // Game events
+    public delegate void GameEvent(GameEventArgs eventArgs);
+    public static GameEvent OnObjectivesComplete;
+    public static void SendOnObjectivesComplete(GameEventArgs args)
+    {
+        OnObjectivesComplete?.Invoke(args);
     }
 
 }

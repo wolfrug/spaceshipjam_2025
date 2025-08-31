@@ -50,9 +50,9 @@ MonoBehaviour:
   self: {fileID: 1280992923580190951}
   gravityWell: {fileID: 3721800497192949681}
   gravityStrength: 1
-  startingVelocity: {x: -1, y: 1}
+  startingVelocity: {x: 1, y: 1}
   automatic_gravity_calculation: 1
-  random_starting_velocity: 1
+  random_starting_velocity: 0
 --- !u!58 &3721800497192949681
 CircleCollider2D:
   m_ObjectHideFlags: 0

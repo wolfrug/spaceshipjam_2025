@@ -14,6 +14,8 @@ public class PlayerHUD : MonoBehaviour
     public int currentVictoryPoints = 0;
     public int maxVictoryPoints = 10;
 
+    public TextMeshProUGUI objectiveText;
+
     public List<PointOfInterest> activePOIs = new List<PointOfInterest> { };
 
     public void AddNewObjectiveIcon(PointOfInterestHUD newIcon)
@@ -43,6 +45,7 @@ public class PlayerHUD : MonoBehaviour
         GlobalEvents.OnPointOfInterestFinished += GlobalEvents_OnPOIFinished;
 
         victoryCounterText.SetText(string.Format("{0}/{1}", currentVictoryPoints, maxVictoryPoints));
+        objectiveText.SetText("Gather " + maxVictoryPoints + " data cores from nearby asteroids.");
     }
 
     void OnDestroy()
@@ -58,6 +61,9 @@ public class PlayerHUD : MonoBehaviour
     {
         healthImage.fillAmount = 1f;
         fuelImage.fillAmount = 1f;
+        currentVictoryPoints = 0;
+        victoryCounterText.SetText(string.Format("{0}/{1}", currentVictoryPoints, maxVictoryPoints));
+        objectiveText.SetText("Gather " + maxVictoryPoints + " data cores from nearby asteroids.");
     }
 
     void CountUpSuccess()
@@ -68,7 +74,8 @@ public class PlayerHUD : MonoBehaviour
         Debug.Log("Counting up success! Current victory points: " + currentVictoryPoints);
         if (currentVictoryPoints >= maxVictoryPoints)
         {
-            SceneManager.LoadScene("EndScene");
+            GlobalEvents.SendOnObjectivesComplete(new GameEventArgs { wonGame = false });
+            objectiveText.SetText("Return to base with the data!");
         }
     }
 

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerCannon : MonoBehaviour
 {
@@ -23,14 +24,18 @@ public class PlayerCannon : MonoBehaviour
 
     public Animator animator;
 
+    public PointOfInterestHUD selfMarker;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
-        fireAction = InputSystem.actions.FindAction("Attack");
+        fireAction = InputSystem.actions.FindAction("Jump");
         currentAimAngle = transform.localRotation.eulerAngles;
         LoadPlayerIntoCannon();
         GlobalEvents.OnPlayerDead += GlobalEvents_OnPlayerDead;
+        GlobalEvents.OnObjectivesComplete += GlobalEvents_OnObjectiveComplete;
+        selfMarker.onFinished.AddListener((x) => WonGame());
     }
 
     void OnDestroy()
@@ -41,6 +46,16 @@ public class PlayerCannon : MonoBehaviour
     void GlobalEvents_OnPlayerDead(PlayerEventArgs args)
     {
         LoadPlayerIntoCannon();
+    }
+
+    void GlobalEvents_OnObjectiveComplete(GameEventArgs args)
+    {
+        selfMarker.gameObject.SetActive(true);
+    }
+
+    void WonGame()
+    {
+        SceneManager.LoadScene("EndScene");
     }
 
     public void LoadPlayerIntoCannon()
@@ -56,6 +71,7 @@ public class PlayerCannon : MonoBehaviour
             loadedTarget.transform.localPosition = Vector3.zero;
             loadedTarget.IsControllable = false;
             loadedTarget.playerCamera.Lens.OrthographicSize = lensOrthoSize;
+            selfMarker.gameObject.SetActive(false);
         }
     }
     public void FirePlayerFromCannon()
