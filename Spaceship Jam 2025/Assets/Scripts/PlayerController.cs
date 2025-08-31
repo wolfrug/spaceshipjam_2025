@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -127,6 +128,28 @@ public class PlayerController : MonoBehaviour
             GlobalEvents.SendOnPlayerDead(new PlayerEventArgs { player = this, playerDead = true });
             animator?.SetBool("player_dead", true);
             IsControllable = false;
+        }
+    }
+
+    List<PointOfInterestHUD> currentlyActiveScanners = new List<PointOfInterestHUD> { };
+    public void SetDownloading(PointOfInterestHUD scannerTarget, bool isDownloading)
+    {
+        if (!currentlyActiveScanners.Contains(scannerTarget) && isDownloading)
+        {
+            currentlyActiveScanners.Add(scannerTarget);
+        }
+        if (currentlyActiveScanners.Contains(scannerTarget) && !isDownloading)
+        {
+            currentlyActiveScanners.Remove(scannerTarget);
+        }
+        if (currentlyActiveScanners.Count > 0)
+        {
+            animator?.SetBool("player_downloading", true);
+            audioSource.PlayRandomType(SFXType.DOWNLOADING);
+        }
+        else
+        {
+            animator?.SetBool("player_downloading", false);
         }
     }
 

@@ -63,11 +63,13 @@ public class PointOfInterestHUD : GenericWorldSpaceToCanvasIcon
             {
                 scanTimeLeft -= Time.deltaTime;
                 animator?.SetBool("scanning", true);
+                PlayerController.Player.SetDownloading(this, true);
             }
             else
             {
                 scanning = false;
                 animator?.SetBool("scanning", false);
+                PlayerController.Player.SetDownloading(this, false);
                 if (!finished)
                 {
                     finished = true;
@@ -80,6 +82,7 @@ public class PointOfInterestHUD : GenericWorldSpaceToCanvasIcon
         else
         {
             animator?.SetBool("scanning", false);
+            PlayerController.Player.SetDownloading(this, false);
         }
     }
 }
