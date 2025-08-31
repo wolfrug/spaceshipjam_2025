@@ -116,6 +116,7 @@ public class PlayerHUD : MonoBehaviour
 
     void GlobalEvents_OnPlayerDead(PlayerEventArgs args)
     {
+        outOfRangeObject.SetActive(false);
         probeLostObject.SetActive(true);
     }
     void GlobalEvents_OnPlayerRespawned(PlayerEventArgs args)

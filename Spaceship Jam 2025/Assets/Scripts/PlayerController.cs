@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour
     public CinemachineCamera playerCamera;
     public Vector2 minMaxCameraDistance = new Vector2(2f, 10f);
 
+    public CustomAudioSource audioSource;
+
     private float velocity_last_frame;
     private float min_damage_velocity = 1f;
 
@@ -119,6 +121,7 @@ public class PlayerController : MonoBehaviour
     {
         HP -= damage;
         GlobalEvents.SendOnPlayerTakeDamage(new PlayerEventArgs { player = this });
+        audioSource.PlayRandomType(SFXType.HIT_OBJECT);
         if (HP <= 0f)
         {
             GlobalEvents.SendOnPlayerDead(new PlayerEventArgs { player = this, playerDead = true });
