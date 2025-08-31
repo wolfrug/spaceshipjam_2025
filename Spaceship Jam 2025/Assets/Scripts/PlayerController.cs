@@ -87,6 +87,23 @@ public class PlayerController : MonoBehaviour
     {
         Player = this;
         moveAction = InputSystem.actions.FindAction("Move");
+        GlobalEvents.OnScanningStarted += GlobalEvents_ScanStarted;
+        GlobalEvents.OnScanningEnded += GlobalEvents_ScanEnded;
+    }
+
+    void OnDestroy()
+    {
+        GlobalEvents.OnScanningStarted -= GlobalEvents_ScanStarted;
+        GlobalEvents.OnScanningEnded -= GlobalEvents_ScanEnded;
+    }
+
+    void GlobalEvents_ScanStarted(HUDEventArgs args)
+    {
+        SetDownloading(args.pointOfInterestHUD, true);
+    }
+    void GlobalEvents_ScanEnded(HUDEventArgs args)
+    {
+        SetDownloading(args.pointOfInterestHUD, false);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -20,6 +20,9 @@ public class PlayerHUD : MonoBehaviour
 
     public GameObject probeLostObject;
 
+    public GameObject downloadingObject;
+    public Animator downloadingAnimator;
+
     public List<PointOfInterest> activePOIs = new List<PointOfInterest> { };
 
     public void AddNewObjectiveIcon(PointOfInterestHUD newIcon)
@@ -50,6 +53,8 @@ public class PlayerHUD : MonoBehaviour
         GlobalEvents.OnPointOfInterestFinished += GlobalEvents_OnPOIFinished;
         GlobalEvents.OnCloseToUniverseEdgeEntered += GlobalEvents_OnEdgeEntered;
         GlobalEvents.OnCloseToUniverseEdgeExited += GlobalEvents_OnEdgeExited;
+        GlobalEvents.OnScanningStarted += GlobalEvents_ScanStarted;
+        GlobalEvents.OnScanningEnded += GlobalEvents_ScanEnded;
 
         victoryCounterText.SetText(string.Format("{0}/{1}", currentVictoryPoints, maxVictoryPoints));
         objectiveText.SetText("Gather " + maxVictoryPoints + " data cores from nearby asteroids.");
@@ -65,6 +70,8 @@ public class PlayerHUD : MonoBehaviour
         GlobalEvents.OnPointOfInterestFinished -= GlobalEvents_OnPOIFinished;
         GlobalEvents.OnCloseToUniverseEdgeEntered -= GlobalEvents_OnEdgeEntered;
         GlobalEvents.OnCloseToUniverseEdgeExited -= GlobalEvents_OnEdgeExited;
+        GlobalEvents.OnScanningStarted -= GlobalEvents_ScanStarted;
+        GlobalEvents.OnScanningEnded -= GlobalEvents_ScanEnded;
     }
 
     void ResetHUD()
@@ -87,6 +94,41 @@ public class PlayerHUD : MonoBehaviour
             GlobalEvents.SendOnObjectivesComplete(new GameEventArgs { wonGame = false });
             objectiveText.SetText("Return to base with the data!");
         }
+    }
+
+    List<PointOfInterestHUD> currentlyActiveScanners = new List<PointOfInterestHUD> { };
+    public void SetDownloading(HUDEventArgs args, bool isDownloading)
+    {
+        PointOfInterestHUD scannerTarget = args.pointOfInterestHUD;
+        if (!currentlyActiveScanners.Contains(scannerTarget) && isDownloading)
+        {
+            currentlyActiveScanners.Add(scannerTarget);
+        }
+        if (currentlyActiveScanners.Contains(scannerTarget) && !isDownloading)
+        {
+            currentlyActiveScanners.Remove(scannerTarget);
+        }
+        if (currentlyActiveScanners.Count > 0)
+        {
+            downloadingObject.SetActive(true);
+            Debug.LogWarning("Setting downloading completion to " + (1f - (args.TimeLeft / args.ScanTimeMax)) + " from max scan time " + args.ScanTimeMax + " and current scan time " + args.TimeLeft);
+            downloadingAnimator.SetFloat("completion", 1f-(args.TimeLeft / args.ScanTimeMax));
+        }
+        else
+        {
+            downloadingObject.SetActive(false);
+        }
+    }
+
+
+    void GlobalEvents_ScanStarted(HUDEventArgs args)
+    {
+        SetDownloading(args, true);
+
+    }
+    void GlobalEvents_ScanEnded(HUDEventArgs args)
+    {
+        SetDownloading(args, false);
     }
 
     void GlobalEvents_OnEdgeEntered(TriggerEnteredEventArgs args)

@@ -52,6 +52,8 @@ MonoBehaviour:
   m_music:
   - m_type: 4000
     m_clip: {fileID: 8300000, guid: 864cdd991c33cfa4a8e1aea2ef6cec2c, type: 3}
+  - m_type: 2000
+    m_clip: {fileID: 8300000, guid: dbd9610850c2e414e9183c05126b358b, type: 3}
   audioVolume: 1
   musicVolume: 1
   muted: {fileID: 0}

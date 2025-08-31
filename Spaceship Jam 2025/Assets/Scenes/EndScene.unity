@@ -580,6 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 0}
   backToMenuButton: {fileID: 2014591396}
+  musicToPlayOnstart: 2000
 --- !u!114 &1385345155
 MonoBehaviour:
   m_ObjectHideFlags: 0
