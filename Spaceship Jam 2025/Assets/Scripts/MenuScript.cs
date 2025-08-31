@@ -6,6 +6,8 @@ public class MenuScript : MonoBehaviour
 {
     public Button startButton;
     public Button backToMenuButton;
+
+    public MusicType musicToPlayOnstart = MusicType.MUSIC_AMBIENT;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +19,7 @@ public class MenuScript : MonoBehaviour
         {
             backToMenuButton.onClick.AddListener(() => ReturnToMenu());
         }
+        AudioManager.instance.PlayMusic(musicToPlayOnstart);
     }
 
     void StartGame()

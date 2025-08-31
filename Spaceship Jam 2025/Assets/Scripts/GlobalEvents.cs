@@ -21,6 +21,8 @@ public class HUDEventArgs
 {
     public PointOfInterestHUD pointOfInterestHUD;
     public bool success;
+    public float ScanTimeMax;
+    public float TimeLeft;
 }
 
 [System.Serializable]
@@ -39,6 +41,8 @@ public static class GlobalEvents
 
     public static TriggeredEnteredEvent OnCloseToUniverseEdgeEntered;
     public static TriggeredEnteredEvent OnCloseToUniverseEdgeExited;
+
+
 
     public static void SendOnGravityObjectOrbitEntered(TriggerEnteredEventArgs args)
     {
@@ -90,6 +94,9 @@ public static class GlobalEvents
 
     public static HUDEvent OnPointOfInterestSpawned;
     public static HUDEvent OnPointOfInterestFinished;
+
+    public static HUDEvent OnScanningStarted;
+    public static HUDEvent OnScanningEnded;
     public static void SendOnPointOfInterestSpawned(HUDEventArgs args)
     {
         OnPointOfInterestSpawned?.Invoke(args);
@@ -97,6 +104,15 @@ public static class GlobalEvents
     public static void SendOnPointOfInterestFinished(HUDEventArgs args)
     {
         OnPointOfInterestFinished?.Invoke(args);
+    }
+
+    public static void SendOnScanStarted(HUDEventArgs args)
+    {
+        OnScanningStarted?.Invoke(args);
+    }
+    public static void SendOnScanFinished(HUDEventArgs args)
+    {
+        OnScanningEnded?.Invoke(args);
     }
 
     // Game events

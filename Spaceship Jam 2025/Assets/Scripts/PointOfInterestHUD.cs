@@ -12,6 +12,7 @@ public class PointOfInterestHUD : GenericWorldSpaceToCanvasIcon
     public Animator animator;
 
     public float scanTimeLeft = 20f;
+    private float maxScanTime;
 
     protected bool scanning = false;
 
@@ -20,10 +21,13 @@ public class PointOfInterestHUD : GenericWorldSpaceToCanvasIcon
         get; set;
     }
 
+    private bool sentScanEvent = true;
+
     public UnityEvent<PointOfInterestHUD> onFinished;
 
     public virtual void Start()
     {
+        maxScanTime = scanTimeLeft;
         GlobalEvents.SendOnPointOfInterestSpawned(new HUDEventArgs { pointOfInterestHUD = this });
     }
 
@@ -36,6 +40,7 @@ public class PointOfInterestHUD : GenericWorldSpaceToCanvasIcon
     {
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
+            sentScanEvent = false;
             scanning = true;
         }
     }
@@ -63,11 +68,13 @@ public class PointOfInterestHUD : GenericWorldSpaceToCanvasIcon
             {
                 scanTimeLeft -= Time.deltaTime;
                 animator?.SetBool("scanning", true);
+                GlobalEvents.SendOnScanStarted(new HUDEventArgs { pointOfInterestHUD = this, ScanTimeMax = maxScanTime, TimeLeft = scanTimeLeft });
             }
             else
             {
                 scanning = false;
                 animator?.SetBool("scanning", false);
+                GlobalEvents.SendOnScanFinished(new HUDEventArgs { pointOfInterestHUD = this, ScanTimeMax = maxScanTime, TimeLeft = scanTimeLeft });
                 if (!finished)
                 {
                     finished = true;
@@ -80,6 +87,11 @@ public class PointOfInterestHUD : GenericWorldSpaceToCanvasIcon
         else
         {
             animator?.SetBool("scanning", false);
+            if (!sentScanEvent)
+            {
+                sentScanEvent = true;
+                GlobalEvents.SendOnScanFinished(new HUDEventArgs { pointOfInterestHUD = this, ScanTimeMax = maxScanTime, TimeLeft = scanTimeLeft });
+            }
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -75,6 +76,8 @@ public class PlayerController : MonoBehaviour
     public CinemachineCamera playerCamera;
     public Vector2 minMaxCameraDistance = new Vector2(2f, 10f);
 
+    public CustomAudioSource audioSource;
+
     private float velocity_last_frame;
     private float min_damage_velocity = 1f;
 
@@ -84,6 +87,23 @@ public class PlayerController : MonoBehaviour
     {
         Player = this;
         moveAction = InputSystem.actions.FindAction("Move");
+        GlobalEvents.OnScanningStarted += GlobalEvents_ScanStarted;
+        GlobalEvents.OnScanningEnded += GlobalEvents_ScanEnded;
+    }
+
+    void OnDestroy()
+    {
+        GlobalEvents.OnScanningStarted -= GlobalEvents_ScanStarted;
+        GlobalEvents.OnScanningEnded -= GlobalEvents_ScanEnded;
+    }
+
+    void GlobalEvents_ScanStarted(HUDEventArgs args)
+    {
+        SetDownloading(args.pointOfInterestHUD, true);
+    }
+    void GlobalEvents_ScanEnded(HUDEventArgs args)
+    {
+        SetDownloading(args.pointOfInterestHUD, false);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -119,11 +139,35 @@ public class PlayerController : MonoBehaviour
     {
         HP -= damage;
         GlobalEvents.SendOnPlayerTakeDamage(new PlayerEventArgs { player = this });
+        audioSource.PlayRandomType(SFXType.HIT_OBJECT);
         if (HP <= 0f)
         {
             GlobalEvents.SendOnPlayerDead(new PlayerEventArgs { player = this, playerDead = true });
             animator?.SetBool("player_dead", true);
             IsControllable = false;
+            audioSource.PlayRandomType(SFXType.PLAYER_DEAD);
+        }
+    }
+
+    List<PointOfInterestHUD> currentlyActiveScanners = new List<PointOfInterestHUD> { };
+    public void SetDownloading(PointOfInterestHUD scannerTarget, bool isDownloading)
+    {
+        if (!currentlyActiveScanners.Contains(scannerTarget) && isDownloading)
+        {
+            currentlyActiveScanners.Add(scannerTarget);
+        }
+        if (currentlyActiveScanners.Contains(scannerTarget) && !isDownloading)
+        {
+            currentlyActiveScanners.Remove(scannerTarget);
+        }
+        if (currentlyActiveScanners.Count > 0)
+        {
+            animator?.SetBool("player_downloading", true);
+            audioSource.PlayRandomType(SFXType.DOWNLOADING);
+        }
+        else
+        {
+            animator?.SetBool("player_downloading", false);
         }
     }
 
