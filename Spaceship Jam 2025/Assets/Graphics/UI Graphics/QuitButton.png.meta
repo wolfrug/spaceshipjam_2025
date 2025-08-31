@@ -1,0 +1,376 @@
+fileFormatVersion: 2
+guid: cce6608bb5e0c8e4889f9c30769c13ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4304446102398311253
+    second: QuitButton_0
+  - first:
+      213: -8948310650188516998
+    second: QuitButton_1
+  - first:
+      213: 7679780475724171825
+    second: QuitButton_2
+  - first:
+      213: -4427586449377802835
+    second: QuitButton_3
+  - first:
+      213: 1178220783612982158
+    second: QuitButton_4
+  - first:
+      213: -6250850870811680893
+    second: QuitButton_5
+  - first:
+      213: 1980109001313150960
+    second: QuitButton_6
+  - first:
+      213: 1256511844209149221
+    second: QuitButton_7
+  - first:
+      213: 2319840444822702844
+    second: QuitButton_8
+  - first:
+      213: -3135262316896497755
+    second: QuitButton_9
+  - first:
+      213: -3243775220873050452
+    second: QuitButton_10
+  - first:
+      213: -9203620953026454816
+    second: QuitButton_11
+  - first:
+      213: -1569681503684343912
+    second: QuitButton_12
+  - first:
+      213: 1005227773550813685
+    second: QuitButton_13
+  - first:
+      213: 6564083668031936538
+    second: QuitButton_14
+  - first:
+      213: 4328237886162302987
+    second: QuitButton_15
+  - first:
+      213: 562380722690365334
+    second: QuitButton_16
+  - first:
+      213: -5726074609768085464
+    second: QuitButton_17
+  - first:
+      213: 9054791582746896990
+    second: QuitButton_18
+  - first:
+      213: 1405068569693485776
+    second: QuitButton_19
+  - first:
+      213: 6073316615307557090
+    second: QuitButton_20
+  - first:
+      213: 2625060961651072032
+    second: QuitButton_21
+  - first:
+      213: -2541699193962565986
+    second: QuitButton_22
+  - first:
+      213: 1513022124766250862
+    second: QuitButton_23
+  - first:
+      213: 1296664497594270243
+    second: QuitButton_24
+  - first:
+      213: -5725732064169176912
+    second: QuitButton_25
+  - first:
+      213: -8045331154391665835
+    second: QuitButton_26
+  - first:
+      213: -8962392160715374995
+    second: QuitButton_27
+  - first:
+      213: 6612373001891283865
+    second: QuitButton_28
+  - first:
+      213: -329113307836668644
+    second: QuitButton_29
+  - first:
+      213: 6414641981574357085
+    second: QuitButton_30
+  - first:
+      213: 4598441203032982845
+    second: QuitButton_31
+  - first:
+      213: 4272876406242376011
+    second: QuitButton_32
+  - first:
+      213: 3178176525103824233
+    second: QuitButton_33
+  - first:
+      213: -4782611131204471470
+    second: QuitButton_34
+  - first:
+      213: -324987962186260795
+    second: QuitButton_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: QuitButton_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b14489ce67cbb30800000000000000
+      internalID: 4304446102398311253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitButton_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a713ba3bfd631d380800000000000000
+      internalID: -8948310650188516998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitButton_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a058847af049a60800000000000000
+      internalID: 7679780475724171825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitButton_3
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5c088259d0e82c0800000000000000
+      internalID: -4427586449377802835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitButton_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83fb3a6f81e95010800000000000000
+      internalID: 1178220783612982158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuitButton_5
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f145d50448049a0800000000000000
+      internalID: -6250850870811680893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 40566af3c8f3b0f4ca5676bf50097ecb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      QuitButton_0: 4304446102398311253
+      QuitButton_1: -8948310650188516998
+      QuitButton_2: 7679780475724171825
+      QuitButton_3: -4427586449377802835
+      QuitButton_4: 1178220783612982158
+      QuitButton_5: -6250850870811680893
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

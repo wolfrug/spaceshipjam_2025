@@ -1,0 +1,412 @@
+fileFormatVersion: 2
+guid: c786c1aff60963a4c82383354bd46e20
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2834816866031520189
+    second: StartButton_0
+  - first:
+      213: 144607954711566811
+    second: StartButton_1
+  - first:
+      213: 1409554443580534697
+    second: StartButton_2
+  - first:
+      213: 5038773851224405555
+    second: StartButton_3
+  - first:
+      213: -4836371460623874491
+    second: StartButton_4
+  - first:
+      213: -2914623409926926749
+    second: StartButton_5
+  - first:
+      213: -524130277212805063
+    second: StartButton_6
+  - first:
+      213: 2780478199939319074
+    second: StartButton_7
+  - first:
+      213: -1982321662022720007
+    second: StartButton_8
+  - first:
+      213: 2256845274123663025
+    second: StartButton_9
+  - first:
+      213: 6032073241876174549
+    second: StartButton_10
+  - first:
+      213: -4698682119532586238
+    second: StartButton_11
+  - first:
+      213: -6695456933667257942
+    second: StartButton_12
+  - first:
+      213: 950217652380661147
+    second: StartButton_13
+  - first:
+      213: -5734039561364119448
+    second: StartButton_14
+  - first:
+      213: 5959472406983657797
+    second: StartButton_15
+  - first:
+      213: -8275006549478700147
+    second: StartButton_16
+  - first:
+      213: -3804311905342689770
+    second: StartButton_17
+  - first:
+      213: 2160448840463994143
+    second: StartButton_18
+  - first:
+      213: 2277067934573075806
+    second: StartButton_19
+  - first:
+      213: 746732828506695998
+    second: StartButton_20
+  - first:
+      213: 1223892835176667474
+    second: StartButton_21
+  - first:
+      213: -424991668143951877
+    second: StartButton_22
+  - first:
+      213: 822813537426700195
+    second: StartButton_23
+  - first:
+      213: 7839194571024261147
+    second: StartButton_24
+  - first:
+      213: 8987690530712587130
+    second: StartButton_25
+  - first:
+      213: -7942845329268896576
+    second: StartButton_26
+  - first:
+      213: -4654964802989879911
+    second: StartButton_27
+  - first:
+      213: 1385314640955811322
+    second: StartButton_28
+  - first:
+      213: -3571796127847170365
+    second: StartButton_29
+  - first:
+      213: 562251185592360974
+    second: StartButton_30
+  - first:
+      213: 4427773658699248847
+    second: StartButton_31
+  - first:
+      213: 4172303094866197020
+    second: StartButton_32
+  - first:
+      213: 7564703013870538348
+    second: StartButton_33
+  - first:
+      213: 8381948346916671453
+    second: StartButton_34
+  - first:
+      213: 1902649706067009675
+    second: StartButton_35
+  - first:
+      213: -7204333950843757790
+    second: StartButton_36
+  - first:
+      213: -8056662776871893821
+    second: StartButton_37
+  - first:
+      213: 9086947767108753479
+    second: StartButton_38
+  - first:
+      213: -5085500202432887968
+    second: StartButton_39
+  - first:
+      213: 324718581323888064
+    second: StartButton_40
+  - first:
+      213: 6317740402687935934
+    second: StartButton_41
+  - first:
+      213: 3957329509574656599
+    second: StartButton_42
+  - first:
+      213: 5310255342919135114
+    second: StartButton_43
+  - first:
+      213: -4641536267839711947
+    second: StartButton_44
+  - first:
+      213: 1293331651926624822
+    second: StartButton_45
+  - first:
+      213: -7937069605806318678
+    second: StartButton_46
+  - first:
+      213: -9086339353183841868
+    second: StartButton_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StartButton_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 346b7e07415b8a8d0800000000000000
+      internalID: -2834816866031520189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartButton_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9574c2b20c10200800000000000000
+      internalID: 144607954711566811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartButton_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9afe03d5c4ebf8310800000000000000
+      internalID: 1409554443580534697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartButton_3
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336f1c10f125de540800000000000000
+      internalID: 5038773851224405555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartButton_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5464dafd7c1c1ecb0800000000000000
+      internalID: -4836371460623874491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StartButton_5
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 0
+        width: 143
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e8445737d2d87d0800000000000000
+      internalID: -2914623409926926749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 966ac88f121650b46bc528ef336dbe37
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      StartButton_0: -2834816866031520189
+      StartButton_1: 144607954711566811
+      StartButton_2: 1409554443580534697
+      StartButton_3: 5038773851224405555
+      StartButton_4: -4836371460623874491
+      StartButton_5: -2914623409926926749
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
