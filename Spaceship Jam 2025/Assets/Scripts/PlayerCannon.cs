@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -45,7 +46,14 @@ public class PlayerCannon : MonoBehaviour
 
     void GlobalEvents_OnPlayerDead(PlayerEventArgs args)
     {
+        StartCoroutine(PlayerDeathWaiter());
+    }
+
+    IEnumerator PlayerDeathWaiter()
+    {
+        yield return new WaitForSeconds(2f);
         LoadPlayerIntoCannon();
+        GlobalEvents.SendOnPlayerRespawned(new PlayerEventArgs());
     }
 
     void GlobalEvents_OnObjectiveComplete(GameEventArgs args)
@@ -65,6 +73,7 @@ public class PlayerCannon : MonoBehaviour
             loadedTarget = PlayerController.Player;
             loadedTarget.HP = loadedTarget.HPMax;
             loadedTarget.ThrusterFuel = loadedTarget.FuelMax;
+            loadedTarget.animator.SetBool("player_dead", false);
             loadedTarget.transform.SetParent(playerPosition);
             loadedTarget.playerRB.bodyType = RigidbodyType2D.Kinematic;
             loadedTarget.playerRB.linearVelocity = Vector2.zero;

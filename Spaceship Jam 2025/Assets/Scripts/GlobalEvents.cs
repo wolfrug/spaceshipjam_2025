@@ -37,6 +37,9 @@ public static class GlobalEvents
     public static TriggeredEnteredEvent OnGravityObjectOrbitEntered;
     public static TriggeredEnteredEvent OnGravityObjectOrbitExited;
 
+    public static TriggeredEnteredEvent OnCloseToUniverseEdgeEntered;
+    public static TriggeredEnteredEvent OnCloseToUniverseEdgeExited;
+
     public static void SendOnGravityObjectOrbitEntered(TriggerEnteredEventArgs args)
     {
         OnGravityObjectOrbitEntered?.Invoke(args);
@@ -46,10 +49,21 @@ public static class GlobalEvents
         OnGravityObjectOrbitExited?.Invoke(args);
     }
 
+    public static void SendOnCloseToUniverseEdgeEntered(TriggerEnteredEventArgs args)
+    {
+        OnCloseToUniverseEdgeEntered?.Invoke(args);
+    }
+
+    public static void SendOnCloseToUniverseEdgeExited(TriggerEnteredEventArgs args)
+    {
+        OnCloseToUniverseEdgeExited?.Invoke(args);
+    }
+
     // player
     public delegate void PlayerEvent(PlayerEventArgs eventArgs);
 
     public static PlayerEvent OnPlayerDead;
+    public static PlayerEvent OnPlayerRespawned;
     public static PlayerEvent OnPlayerUseThruster;
     public static PlayerEvent OnPlayerTakeDamage;
 
@@ -57,6 +71,10 @@ public static class GlobalEvents
     public static void SendOnPlayerDead(PlayerEventArgs args)
     {
         OnPlayerDead?.Invoke(args);
+    }
+    public static void SendOnPlayerRespawned(PlayerEventArgs args)
+    {
+        OnPlayerRespawned?.Invoke(args);
     }
     public static void SendOnPlayerUseThruster(PlayerEventArgs args)
     {

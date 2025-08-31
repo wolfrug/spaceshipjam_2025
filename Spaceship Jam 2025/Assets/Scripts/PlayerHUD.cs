@@ -16,6 +16,10 @@ public class PlayerHUD : MonoBehaviour
 
     public TextMeshProUGUI objectiveText;
 
+    public GameObject outOfRangeObject;
+
+    public GameObject probeLostObject;
+
     public List<PointOfInterest> activePOIs = new List<PointOfInterest> { };
 
     public void AddNewObjectiveIcon(PointOfInterestHUD newIcon)
@@ -41,8 +45,11 @@ public class PlayerHUD : MonoBehaviour
         GlobalEvents.OnPlayerTakeDamage += GlobalEvents_OnPlayerTakeDamage;
         GlobalEvents.OnPlayerUseThruster += GlobalEvents_OnPlayerUseThruster;
         GlobalEvents.OnPlayerDead += GlobalEvents_OnPlayerDead;
+        GlobalEvents.OnPlayerRespawned += GlobalEvents_OnPlayerRespawned;
         GlobalEvents.OnPointOfInterestSpawned += GlobalEvents_OnNewPOISpawned;
         GlobalEvents.OnPointOfInterestFinished += GlobalEvents_OnPOIFinished;
+        GlobalEvents.OnCloseToUniverseEdgeEntered += GlobalEvents_OnEdgeEntered;
+        GlobalEvents.OnCloseToUniverseEdgeExited += GlobalEvents_OnEdgeExited;
 
         victoryCounterText.SetText(string.Format("{0}/{1}", currentVictoryPoints, maxVictoryPoints));
         objectiveText.SetText("Gather " + maxVictoryPoints + " data cores from nearby asteroids.");
@@ -53,8 +60,11 @@ public class PlayerHUD : MonoBehaviour
         GlobalEvents.OnPlayerTakeDamage -= GlobalEvents_OnPlayerTakeDamage;
         GlobalEvents.OnPlayerUseThruster -= GlobalEvents_OnPlayerUseThruster;
         GlobalEvents.OnPlayerDead -= GlobalEvents_OnPlayerDead;
+        GlobalEvents.OnPlayerRespawned -= GlobalEvents_OnPlayerRespawned;
         GlobalEvents.OnPointOfInterestSpawned -= GlobalEvents_OnNewPOISpawned;
         GlobalEvents.OnPointOfInterestFinished -= GlobalEvents_OnPOIFinished;
+        GlobalEvents.OnCloseToUniverseEdgeEntered -= GlobalEvents_OnEdgeEntered;
+        GlobalEvents.OnCloseToUniverseEdgeExited -= GlobalEvents_OnEdgeExited;
     }
 
     void ResetHUD()
@@ -79,6 +89,16 @@ public class PlayerHUD : MonoBehaviour
         }
     }
 
+    void GlobalEvents_OnEdgeEntered(TriggerEnteredEventArgs args)
+    {
+        outOfRangeObject.SetActive(true);
+    }
+    void GlobalEvents_OnEdgeExited(TriggerEnteredEventArgs args)
+    {
+        outOfRangeObject.SetActive(false);
+    }
+
+
     void GlobalEvents_OnNewPOISpawned(HUDEventArgs args)
     {
         AddNewObjectiveIcon(args.pointOfInterestHUD);
@@ -96,7 +116,12 @@ public class PlayerHUD : MonoBehaviour
 
     void GlobalEvents_OnPlayerDead(PlayerEventArgs args)
     {
+        probeLostObject.SetActive(true);
+    }
+    void GlobalEvents_OnPlayerRespawned(PlayerEventArgs args)
+    {
         ResetHUD();
+        probeLostObject.SetActive(false);
     }
 
     void GlobalEvents_OnPlayerTakeDamage(PlayerEventArgs args)

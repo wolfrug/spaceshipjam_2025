@@ -122,6 +122,8 @@ public class PlayerController : MonoBehaviour
         if (HP <= 0f)
         {
             GlobalEvents.SendOnPlayerDead(new PlayerEventArgs { player = this, playerDead = true });
+            animator?.SetBool("player_dead", true);
+            IsControllable = false;
         }
     }
 
