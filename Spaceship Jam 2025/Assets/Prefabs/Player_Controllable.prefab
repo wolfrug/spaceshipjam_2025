@@ -149,6 +149,8 @@ MonoBehaviour:
     m_clip: {fileID: 8300000, guid: 594bb966cc6a253448f1d8e53c9854a9, type: 3}
   - m_type: 4000
     m_clip: {fileID: 8300000, guid: 2bb3b386cec38584bb05960454e5a117, type: 3}
+  - m_type: 4600
+    m_clip: {fileID: 8300000, guid: a1fa0a246aaf1d04a823e40eabfd5500, type: 3}
   source: {fileID: 0}
   RandomizeAndPlayOnStart: 0
   m_debugWarnings: 0

@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour
             GlobalEvents.SendOnPlayerDead(new PlayerEventArgs { player = this, playerDead = true });
             animator?.SetBool("player_dead", true);
             IsControllable = false;
+            audioSource.PlayRandomType(SFXType.PLAYER_DEAD);
         }
     }
 
